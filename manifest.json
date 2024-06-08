@@ -1,20 +1,19 @@
 {
-    "manifest_version": "2",
-    "api_version": "1",
-    "name": "LocalListeners",
+    "required_api_version": "2",
+    "name": "LocalListenersV2",
     "description": "Local listeners extension",
-    "developer_name": "Michael Sandler",
+    "developer_name": "Christopher Johnson",
     "icon": "images/icon.png",
     "options": {
         "query_debounce": 0.05
     },
     "preferences": [
         {
-            "id": "local_listeners",
+            "id": "local_listeners_v2",
             "type": "keyword",
-            "name": "Local Listeners",
-            "description": "Local Listeners",
-            "default_value": "los"
+            "name": "Local Listeners v2",
+            "description": "Local Listeners v2",
+            "default_value": "los2"
         },
         {
             "id": "browser_selector",
