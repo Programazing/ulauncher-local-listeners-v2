@@ -2,13 +2,13 @@ import sys
 import time
 import socket
 import psutil
-import httplib
+import http.client
 import webbrowser
 
 from time import sleep
 from subprocess import Popen, PIPE
 from subprocess import check_output
-from urlparse import urlparse
+from urllib.parse import urlparse
 
 from ulauncher.api.client.Extension import Extension
 from ulauncher.api.client.EventListener import EventListener
@@ -76,7 +76,7 @@ class ItemEnterEventListener(EventListener):
 
     def check_url(self, url):
         url = urlparse(url)
-        conn = httplib.HTTPConnection(url.netloc)
+        conn = http.client.HTTPConnection(url.netloc)
         conn.request("HEAD", url.path)
         if conn.getresponse():
             return True
