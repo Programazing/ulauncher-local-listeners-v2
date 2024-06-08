@@ -1,6 +1,6 @@
 {
     "required_api_version": "2",
-    "name": "LocalListenersV2",
+    "name": "Local Listeners v2",
     "description": "Local listeners extension",
     "developer_name": "Christopher Johnson",
     "icon": "images/icon.png",
