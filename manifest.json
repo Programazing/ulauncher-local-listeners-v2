@@ -13,7 +13,7 @@
             "type": "keyword",
             "name": "Local Listeners v2",
             "description": "Local Listeners v2",
-            "default_value": "los2"
+            "default_value": "los"
         },
         {
             "id": "browser_selector",
