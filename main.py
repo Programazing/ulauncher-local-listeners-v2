@@ -6,8 +6,7 @@ import http.client
 import webbrowser
 
 from time import sleep
-from subprocess import Popen, PIPE
-from subprocess import check_output
+from subprocess import Popen, PIPE, check_output
 from urllib.parse import urlparse
 
 from ulauncher.api.client.Extension import Extension
@@ -43,7 +42,7 @@ class KeywordQueryEventListener(EventListener):
         lc = psutil.net_connections("inet")
         def get_pid_name(name):
             try:
-                return check_output(["ps", "-p", name, "-o", "comm="])
+                return check_output(["ps", "-p", name, "-o", "comm="]).decode('utf-8').strip()
             except Exception:
                 return None
 
@@ -99,7 +98,7 @@ class ItemEnterEventListener(EventListener):
 
         if data["action"] == ACTION_GOTO_ADDR:
             url = self.add_scheme(data["address"])
-            if url == None:
+            if url is None:
                 return
             else:
                 if extension.preferences[OPTION_BROWSER_SELECTOR] == OPTIONVAL_BRS_DEFAULT:
@@ -116,3 +115,4 @@ class ItemEnterEventListener(EventListener):
 
 if __name__ == "__main__":
     LocalListenersExtension().run()
+
