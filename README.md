@@ -1,20 +1,14 @@
-# ulauncher-local-listeners
+# ulauncher-local-listeners-v2
+
 This extension provides a quick way to browse to local http or https listeners instead of fishing the specific ports in your browser history.
 
 ![ulauncher-local-listeners extension screenshot](screenshot.png)
 
 ## Requirements
-This extension requires package `psutil` for python2.
+
+This extension requires the python package `psutil`
 To install:
 
+```bash
+pip install psutil
 ```
-  pip install psutil
-```
-
-or
-
-```
-  pip2 install psutil
-```
-
-for Arch users.
